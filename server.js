@@ -9,7 +9,9 @@ app.set('views', './views')
 app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}))
 
-
+app.get('/', (req, res) => {
+    res.render('index.ejs');
+  });
 
 // Stel het poortnummer in waar express naar moet gaan luisteren
 app.set('port', process.env.PORT || 8001)
