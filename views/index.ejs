@@ -1,2 +1,5 @@
 <%- include ("partials/head") %>
+<% items.forEach(item => {%>
+<p><%= item.name %></p>
+<%}); %>
 <%- include ("partials/foot") %>
