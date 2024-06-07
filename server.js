@@ -9,9 +9,16 @@ app.set('views', './views')
 app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}))
 
-app.get('/', (req, res) => {
-    res.render('index.ejs');
-  });
+const apiUrl = 'https://fdnd-agency.directus.app/items/'
+
+app.get('/', function(request, response) {
+ 
+    fetchJson(apiUrl + 'deloitte_categories').then((items) => {
+        response.render('home', {           
+            items: items.data,
+        })
+    });
+})
 
 // Stel het poortnummer in waar express naar moet gaan luisteren
 app.set('port', process.env.PORT || 8001)
