@@ -51,7 +51,35 @@
     }
 }
 
+html{
+    overflow-x: hidden;
+}
+
 body{
     background: var(--color-base);
+    font-family: sans-serif;
+}
+
+p{
+    font-size: 16px;
+}
+
+nav{
+    background: var(--color-accent);
+    height: 4rem;
+}
+
+.navItems{
+    text-decoration: none;
+    color: var(--color-nav-text);
+    margin-top: 1rem;
+    margin-left: 1rem;
+    display: inline-block;
+    border: 2px solid var(--color-support);
+    vertical-align: middle;
+    height: 2rem;
+    width: 5rem;
+    text-align: center;
+    line-height: 2rem;
 }
 
