@@ -1,5 +1,6 @@
 <%- include ("partials/head") %>
+</nav>
 <% items.forEach(item => {%>
-<p><%= item.name %></p>
+<a href="categorie/<%- item.id %>"><div class="choiceMenu menuItem<%- item.id %>"><p class="btnBorder"><%= item.name %></p></div></a>
 <%}); %>
 <%- include ("partials/foot") %>

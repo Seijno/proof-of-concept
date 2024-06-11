@@ -82,4 +82,41 @@ nav{
     text-align: center;
     line-height: 2rem;
 }
+.choiceMenu{
+    display: flex;
+  align-items: center;
+    height: 12rem;
+    width: 80vw;
+    scale: 1;
+    margin: 0 auto;
+    margin-top: 2rem;
+    transition: 1s ;
+}
+
+.menuItem1{
+    background: url(assets/audit.png);
+    background-size: cover;
+}
+
+.menuItem2{
+    background: url(assets/innovatie.png);
+    background-size: cover;
+}
+
+.menuItem3{
+    background: url(assets/consulting.png);
+    background-size: cover;
+}
+.btnBorder{
+    align-items: center;
+    width: 5rem;
+    height: 3rem;
+    background: rgba(92, 92, 92, 0.527);
+    color: var(--color-card);
+    line-height: 3rem;
+    border: solid 2px black;
+    text-align: center;
+    margin: 0 auto;
+
+}
 
