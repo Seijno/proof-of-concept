@@ -4,7 +4,7 @@
 <h2>Kies welke opstelling u wilt gebruiken uit de categorie: <%=  %></h2>
 
 <% subcategorieItems.forEach(subItem => {%>
-    <a href="subcategorieform/<%- subItem.id %>"><div class="choiceMenu menuItem<%- subItem.id %>"><p class="btnBorder"><%= subItem.name %></p></div></a>
+    <a href="subcategorieform/<%- subItem.id %>"><div class="choiceMenu SubMenuItem<%- subItem.id %>"><p class="btnBorder"><%= subItem.name %></p></div></a>
     <%}); %>
  
 <%- include ("partials/foot") %>

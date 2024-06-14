@@ -10,7 +10,6 @@ app.set('views', './views')
 app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}))
 
-
 const apiUrl = 'https://fdnd-agency.directus.app/items/',
 categorie = await fetchJson (apiUrl + 'deloitte_categories'),
 subcategorie = await fetchJson(apiUrl + 'deloitte_subcategories?filter[subcategory_id]=')
@@ -26,13 +25,12 @@ app.get('/', function(request, response) {
     });
 
 app.get('/categorie/:id', async function(request, response) {
-    console.log(subcategorie + request.params.id)
-    await fetchJson (categorie, subcategorie + request.params.id)
-    response.render('categorie', {
-
-        items: categorie.data,
-        subcategorieItems: subcategorie.data
-    });
+    console.log(subcategorie)
+    fetchJson (`${subcategorie}${request.params.id}`).then((subcategorieData) => {
+        response.render('categorie', {
+            subcategorieItems: subcategorieData.data
+        });
+    })
   });
 // Stel het poortnummer in waar express naar moet gaan luisteren
 app.set('port', process.env.PORT || 8001)
