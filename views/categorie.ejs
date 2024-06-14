@@ -1,10 +1,11 @@
 <%- include ("partials/head") %>
 <%- include ("partials/navlink") %>
 </nav>
-<h2>Kies welke opstelling u wilt gebruiken uit de categorie: <%=  %></h2>
-
+<p><a href="/">home</a> / </p>
+<main class="wrapper">
 <% subcategorieItems.forEach(subItem => {%>
-    <a href="subcategorieform/<%- subItem.id %>"><div class="choiceMenu SubMenuItem<%- subItem.id %>"><p class="btnBorder"><%= subItem.name %></p></div></a>
+    <a href="prompt/<%- subItem.id %>"><div class="choiceMenu SubMenuItem<%- subItem.id %>"><p class="btnBorder"><%= subItem.name %></p></div></a>
     <%}); %>
+</main>
  
 <%- include ("partials/foot") %>

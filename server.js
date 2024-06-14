@@ -12,7 +12,8 @@ app.use(express.urlencoded({extended: true}))
 
 const apiUrl = 'https://fdnd-agency.directus.app/items/',
 categorie = await fetchJson (apiUrl + 'deloitte_categories'),
-subcategorie = await fetchJson(apiUrl + 'deloitte_subcategories?filter[subcategory_id]=')
+subcategorie = apiUrl + 'deloitte_subcategories?filter[subcategory_id]=',
+prompt = apiUrl + 'deloitte_prompts?filter[label]='
 
 
 app.get('/', function(request, response) {
@@ -25,10 +26,19 @@ app.get('/', function(request, response) {
     });
 
 app.get('/categorie/:id', async function(request, response) {
-    console.log(subcategorie)
     fetchJson (`${subcategorie}${request.params.id}`).then((subcategorieData) => {
         response.render('categorie', {
-            subcategorieItems: subcategorieData.data
+            subcategorieItems: subcategorieData.data,
+            promptItems: promptData.data
+        });
+    })
+  });
+
+app.get('/prompt/:label', async function(request, response) {
+    console.log(prompt)
+    fetchJson (`${prompt}${request.params.label}`).then((promptData) => {
+        response.render('prompt', {
+            promptItems: promptData.data
         });
     })
   });

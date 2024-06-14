@@ -73,18 +73,18 @@ nav{
     text-decoration: none;
     color: var(--color-nav-text);
     margin-bottom: 2rem;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
     display: inline-block;
     border: 2px solid var(--color-support);
     vertical-align: middle;
-    height: 2rem;
+    height: 1.5rem;
     width: 5rem;
     text-align: center;
-    line-height: 2rem;
+    line-height: 1.5rem;
 }
 .choiceMenu{
     display: flex;
-  align-items: center;
+    align-items: center;
     height: 12rem;
     width: 80vw;
     scale: 1;
@@ -127,10 +127,14 @@ nav{
         display: inline-block;
         height: 60vh;
         width: 30vw;
-        margin-left: 2rem;
+        margin-left: 0;
     }
     .btnBorder{
         margin-top: 50%;
+    }
+    .wrapper{
+        display: flex;
+        justify-content: space-evenly;
     }
 }
 
