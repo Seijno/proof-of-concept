@@ -2,7 +2,9 @@
 </nav>
 <main class="wrapper">
 <% items.forEach(item => {%>
-<a href="categorie/<%- item.id %>"><div class="choiceMenu menuItem<%- item.id %>"><p class="btnBorder"><%= item.name %></p></div></a>
+    <label for="<%- item.name %>">
+        <a href="categorie/<%- item.id %>"><div class="choiceMenu menuItem<%- item.id %>"><p class="btnBorder"><%= item.name %></p></div></a>
+    </label>
 <%}); %>
 </main>
 <%- include ("partials/foot") %>

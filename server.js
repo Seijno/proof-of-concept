@@ -16,6 +16,7 @@ subcategorie = apiUrl + 'deloitte_subcategories?filter[subcategory_id]=',
 prompt = apiUrl + 'deloitte_prompts?filter[label]='
 
 
+// index renderen en categories ophalen
 app.get('/', function(request, response) {
  
     fetchJson(categorie)
@@ -25,6 +26,7 @@ app.get('/', function(request, response) {
         })
     });
 
+    // subcategorie laden
 app.get('/categorie/:id', async function(request, response) {
     fetchJson (`${subcategorie}${request.params.id}`).then((subcategorieData) => {
         response.render('categorie', {

@@ -4,7 +4,9 @@
 <p><a href="/">home</a> / </p>
 <main class="wrapper">
 <% subcategorieItems.forEach(subItem => {%>
-    <a href="prompt/<%- subItem.id %>"><div class="choiceMenu SubMenuItem<%- subItem.id %>"><p class="btnBorder"><%= subItem.name %></p></div></a>
+    <label for="<% subItem.name %>">
+        <a href="prompt/<%- subItem.id %>"><div class="choiceMenu SubMenuItem<%- subItem.id %>"><p class="btnBorder"><%= subItem.name %></p></div></a>
+    </label>
     <%}); %>
 </main>
  
