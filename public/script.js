@@ -1,3 +1,4 @@
+// progress bar
 const progressBar = document.getElementById("progressbar");
 progressBar.style.height = 1 + "%";
 
@@ -20,7 +21,21 @@ window.onscroll = () => {
 };
 
 
+// item appearing animation
 document.querySelectorAll(".choiceMenu, .btnBorder")
   .forEach((div, index) => {
     div.style.animationDelay = `${index * 0.2}s`;
   });
+
+// loader hider/appear
+const active = document.querySelector(".choiceMenu");
+const hider = document.querySelector(".loadHider");
+active.addEventListener(click, show);
+
+function show(){
+  hider.classList.toggle('loader')
+};
+
+      
+
+      

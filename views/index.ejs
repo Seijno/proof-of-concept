@@ -1,5 +1,4 @@
 <%- include ("partials/head") %>
-<h1 class="logoName">headstart</h1>
 </nav>
 <div class="progress-container">
 	<div id="progressbar" class="progress-bar"></div>
@@ -7,7 +6,8 @@
 <main class="wrapper">
 <% items.forEach(item => {%>
     <label for="<%- item.name %>">
-        <a href="categorie/<%- item.id %>"><div class="choiceMenu menuItem<%- item.id %>"><p class="btnBorder"><%= item.name %></p></div></a>
+        <a href="categorie/<%- item.id %>" class="loadhider"><div class="choiceMenu menuItem<%- item.id %>"><p class="btnBorder"><%= item.name %></p></div></a>
+        <div class="loadHider">.</div>\
     </label>
 <%}); %>
 </main>
