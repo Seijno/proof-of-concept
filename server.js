@@ -29,7 +29,7 @@ app.get('/categorie/:id', async function(request, response) {
     fetchJson (`${subcategorie}${request.params.id}`).then((subcategorieData) => {
         response.render('categorie', {
             subcategorieItems: subcategorieData.data,
-            promptItems: promptData.data
+            // promptItems: promptData.data
         });
     })
   });
@@ -42,6 +42,17 @@ app.get('/prompt/:label', async function(request, response) {
         });
     })
   });
+
+//   404 error pagina
+  app.use(function(request, responds, next) {
+    request.status(404);
+
+    if (request.accepts('html')) {
+      responds.render('404', { url: req.url });
+      return;
+    }
+})
+  
 // Stel het poortnummer in waar express naar moet gaan luisteren
 app.set('port', process.env.PORT || 8001)
 
