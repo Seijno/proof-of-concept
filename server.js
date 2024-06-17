@@ -31,7 +31,6 @@ app.get('/categorie/:id', async function(request, response) {
     fetchJson (`${subcategorie}${request.params.id}`).then((subcategorieData) => {
         response.render('categorie', {
             subcategorieItems: subcategorieData.data
-            // promptItems: promptData.data
         });
     })
   });
@@ -39,7 +38,6 @@ app.get('/categorie/:id', async function(request, response) {
     //prompt page
 app.get('/prompt/:id', async function(request, response) {
     fetchJson (`${prompt}${request.params.id}`).then((promptData) => {
-        console.log(promptData);
         response.render('prompt', {
             promptItem: promptData.data
         });

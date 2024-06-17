@@ -86,10 +86,7 @@ nav{
 .logoName{
     display: none;
 }
-.breadcrumbs{
-    margin-left: 2rem;
-    width: 10rem;
-}
+
 .choiceMenu{
     display: flex;
     align-items: center;
@@ -174,6 +171,18 @@ nav{
     animation: spin 2s linear infinite;
     margin: 0 auto;
   }
+.promptForm{
+    width: 70vw;
+    margin: 0 auto;
+}
+.formSubmit{
+    width: 60vw;
+    height: 2rem;
+    border-radius: 15px;
+    border: 1px solid var(--color-support);
+    background: var(--color-accent);
+    color: var(--color-nav-text);
+}
 
 @media (min-width: 1212px){
 

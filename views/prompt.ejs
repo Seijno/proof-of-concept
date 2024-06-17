@@ -3,7 +3,47 @@
 
 <% promptItem.forEach(item => {%>
     <label for="<%- item.name %>">
-       <p><%= item.text %></p>
+       <form action="" method="POST" class="promptForm">
+            <p>
+                <!-- financial review -->
+                <%- item.text.replace("{{ Financial Statement File }}", '<input class="form__input" type="file" name="fileData" placeholder="Survey Results">')
+                .replace("{{ Review Date }}", '<input class="form__input" type="date" name="dateData" placeholder="Survey Completion Date">')
+                .replace("{{ Lead Auditor }}", '<input class="form__input" type="text" name="textData" placeholder="Survey Coordinator">')
+
+                // Compliance check
+                .replace("{{ Last Compliance Review Date }}", '<input class="form__input" type="date" name="dateData" placeholder="Last compliance review date">')
+                .replace("{{ Compliance Officer }}", '<input class="form__input" type="text" name="textData" placeholder=" Compliance officer">')
+                .replace("{{ Compliance Document }}", '<input class="form__input" type="file" name="fileData" placeholder="Compliance Document">')
+                
+                // Product development
+                .replace("{{ Product Features }}", '<input class="form__input" type="text" name="textData" placeholder="Product Features">')
+                .replace("{{ Target Market }}", '<input class="form__input" type="text" name="textData2" placeholder="Target Market">')
+                .replace("{{ Estimated Cost }}", '<input class="form__input" type="number" name="numberData" placeholder="Estimated Cost">')
+
+                // Product Launch planning
+                .replace("{{ Launch Date }}", '<input class="form__input" type="date" name="dateData" placeholder="Launch Date">')
+                .replace("{{ Marketing Budget }}", '<input class="form__input" type="number" name="numberData" placeholder="Marketing Budget">')
+                .replace("{{ Project Manager }}", '<input class="form__input" type="text" name="textData" placeholder="Project Manager">')
+
+                // Market research
+                .replace("{{ Survey Results }}", '<input class="form__input" type="file" name="fileData" placeholder="Survey Results">')
+                .replace("{{ Survey Completion Date }}", '<input class="form__input" type="date" name="dateData" placeholder="Survey Completion Date">')
+                .replace("{{ Survey Coordinator }}", '<input class="form__input" type="text" name="textData" placeholder="Survey Coordinator">')
+
+                // Document processing
+                .replace("{{ Main Findings }}", '<input class="form__input" type="textarea" name="textData" placeholder="Main findings">')
+                .replace("{{ Supporting Documents }}", '<input class="form__input" type="file" name="fileData" placeholder=" Supporting Documents">')
+                .replace("{{ Report Submission Date }}", '<input class="form__input" type="date" name="dateData" placeholder="Report Submission Date">')
+
+                // Cliënt meetings
+                .replace("{{ Meeting Date and Time }}", '<input class="form__input" type="datetime-local" name="dateData" placeholder="Meeting Date and Time">')
+                .replace("{{ Meeting Agenda }}", '<input class="form__input" type="textarea" name="textData" placeholder="Meeting Agenda">')
+                .replace("{{ Client Contact Information }}", '<input class="form__input" type="text" name="textData2" placeholder="Client Contact Information">')
+                %>
+            </p>
+            <input type="hidden" value="<%= item.name %>">
+            <input type="submit" value="send" class="formSubmit">
+       </form>
     </label>
 <%}); %> 
 <%- include ("partials/foot") %>
