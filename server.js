@@ -16,33 +16,31 @@ subcategorie = apiUrl + 'deloitte_subcategories?filter[subcategory_id]=',
 prompt = apiUrl + 'deloitte_prompts?filter[subcategorie]='
 
 
-// index renderen en categories ophalen
+// loading index and GET categories
 app.get('/', function(request, response) {
- 
     fetchJson(categorie)
-        response.render('index', {           
-            items: categorie.data
+    response.render('index', {           
+        items: categorie.data
+    })
+});
 
-        })
-    });
-
-    // subcategorie laden
+    // loading subcategorie with categorie id
 app.get('/categorie/:id', async function(request, response) {
     fetchJson (`${subcategorie}${request.params.id}`).then((subcategorieData) => {
         response.render('categorie', {
             subcategorieItems: subcategorieData.data
         });
     })
-  });
+});
 
-    //prompt page
+    //loading prompt page with subcategorie id
 app.get('/prompt/:id', async function(request, response) {
     fetchJson (`${prompt}${request.params.id}`).then((promptData) => {
         response.render('prompt', {
             promptItem: promptData.data
         });
     })
-  });
+});
 
 //   404 error pagina
 //   app.use(function(request, responds, next) {

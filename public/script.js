@@ -1,11 +1,10 @@
-// progress bar
+// a big progress bar (for pleasurable) (had to look this one up)
 const progressBar = document.getElementById("progressbar");
 progressBar.style.height = 1 + "%";
 
-window.onscroll = () => {
-	const scroll = document.documentElement.scrollTop;
-	const height =
-		document.documentElement.scrollHeight - document.documentElement.clientHeight;
+window.onscroll = function() {
+	const scroll = document.documentElement.scrollTop,
+	height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 	let scrolled = (scroll / height) * 100;
 
 	if (scrolled <= 1) {

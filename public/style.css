@@ -1,3 +1,4 @@
+/* basic styling */
 :root{
     /* light mode */
     --color-accent: #6fc2b4;
@@ -64,6 +65,7 @@ p{
     font-size: 16px;
 }
 
+/* navigation menu */
 nav{
     background: var(--color-accent);
     height: 4rem;
@@ -87,11 +89,14 @@ nav{
     display: none;
 }
 
+/* main content */
 .choiceMenu{
     display: flex;
     align-items: center;
     height: 12rem;
     width: 80vw;
+    min-width: 250px;
+    min-height: 250px;
     scale: 1;
     margin: 0 auto;
     margin-top: 2rem;
@@ -102,6 +107,19 @@ nav{
     background: var(--color-tint-support);
 }
 
+.btnBorder{
+    align-items: center;
+    width: 15rem;
+    height: 3rem;
+    background: rgba(92, 92, 92, 0.527);
+    color: var(--color-card);
+    line-height: 3rem;
+    border: solid 2px black;
+    text-align: center;
+    margin: 0 auto;
+
+}
+/* menu item with a id number after it THIS IS NOT A GOOD LONG TERM STYLING, its a test with ejs styling */
 .menuItem1{
     background: url(assets/audit.png);
     background-size: cover;
@@ -116,19 +134,21 @@ nav{
     background: url(assets/consulting.png);
     background-size: cover;
 }
-.btnBorder{
-    align-items: center;
-    width: 15rem;
-    height: 3rem;
-    background: rgba(92, 92, 92, 0.527);
-    color: var(--color-card);
-    line-height: 3rem;
-    border: solid 2px black;
-    text-align: center;
+
+  /* form/prompt styling */
+.promptForm{
+    width: 70vw;
     margin: 0 auto;
-
 }
-
+.formSubmit{
+    width: 60vw;
+    height: 2rem;
+    border-radius: 15px;
+    border: 1px solid var(--color-support);
+    background: var(--color-accent);
+    color: var(--color-nav-text);
+}
+/* progress bar */
 .progress-container {
 	position: fixed;
 	left: 10px;
@@ -155,6 +175,7 @@ nav{
 	box-shadow: 0px 0px 14px 21px rgba(212, 178, 85, 0.48);
 }
 
+/* Load animation */
 .loadHider{
     display: none;
     margin-top: 1rem;
@@ -171,19 +192,8 @@ nav{
     animation: spin 2s linear infinite;
     margin: 0 auto;
   }
-.promptForm{
-    width: 70vw;
-    margin: 0 auto;
-}
-.formSubmit{
-    width: 60vw;
-    height: 2rem;
-    border-radius: 15px;
-    border: 1px solid var(--color-support);
-    background: var(--color-accent);
-    color: var(--color-nav-text);
-}
 
+  /* desktop query */
 @media (min-width: 1212px){
 
     .choiceMenu{
@@ -204,6 +214,7 @@ nav{
     }
 }
 
+/* tablet query */
 @media (min-width: 800px){
     .logoName{
         color: var(--color-nav-text);
@@ -218,7 +229,7 @@ nav{
         line-height: 1.5rem;
     }
 }
-
+/* a little adjustment for a breaking point */
 @media (max-width: 1212px){
     .choiceMenu{
         height: 30vh;
@@ -227,6 +238,7 @@ nav{
     }
 }
 
+/* animations */
 @keyframes fadeIn {
     from {
       opacity: 0;
