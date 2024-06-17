@@ -1,7 +1,7 @@
 > _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
-# Titel
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
+# Headstart
+Een chat bot voor Deloitte
 
 ## Inhoudsopgave
 
@@ -13,8 +13,9 @@
   * [Licentie](#licentie)
 
 ## Beschrijving
-<!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
-<!-- Voeg een mooie poster visual toe 📸 -->
+headstart is een chatgpt voor deloitte, de opdracht is gemaakt voor medewerkens van deloitte die een simpele Interface en prompts willen voor hun vragen. Het resultaat voor dit project gaat dat probleem realiseren zodat de gebruikers overzichtelijk de categorie en subcategorie kunnen kiezen met daarna een vaste prompt waar data moet worden ingevult voor de AI.
+
+
 <!-- Voeg een link toe naar Github Pages 🌐-->
 
 ## Gebruik
