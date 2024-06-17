@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended: true}))
 const apiUrl = 'https://fdnd-agency.directus.app/items/',
 categorie = await fetchJson (apiUrl + 'deloitte_categories'),
 subcategorie = apiUrl + 'deloitte_subcategories?filter[subcategory_id]=',
-prompt = apiUrl + 'deloitte_prompts?filter[label]='
+prompt = apiUrl + 'deloitte_prompts?filter[subcategorie]='
 
 
 // index renderen en categories ophalen
@@ -30,30 +30,31 @@ app.get('/', function(request, response) {
 app.get('/categorie/:id', async function(request, response) {
     fetchJson (`${subcategorie}${request.params.id}`).then((subcategorieData) => {
         response.render('categorie', {
-            subcategorieItems: subcategorieData.data,
+            subcategorieItems: subcategorieData.data
             // promptItems: promptData.data
         });
     })
   });
 
-app.get('/prompt/:label', async function(request, response) {
-    console.log(prompt)
-    fetchJson (`${prompt}${request.params.label}`).then((promptData) => {
+    //prompt page
+app.get('/prompt/:id', async function(request, response) {
+    fetchJson (`${prompt}${request.params.id}`).then((promptData) => {
+        console.log(promptData);
         response.render('prompt', {
-            promptItems: promptData.data
+            promptItem: promptData.data
         });
     })
   });
 
 //   404 error pagina
-  app.use(function(request, responds, next) {
-    request.status(404);
+//   app.use(function(request, responds, next) {
+//     request.status(404);
 
-    if (request.accepts('html')) {
-      responds.render('404', { url: req.url });
-      return;
-    }
-})
+//     if (request.accepts('html')) {
+//       responds.render('404', { url: req.url });
+//       return;
+//     }
+// })
   
 // Stel het poortnummer in waar express naar moet gaan luisteren
 app.set('port', process.env.PORT || 8001)

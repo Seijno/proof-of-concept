@@ -1,12 +1,23 @@
 <%- include ("partials/head") %>
 <%- include ("partials/navlink") %>
 </nav>
-<p><a href="/">home</a> / </p>
+
+    <div class="progress-container">
+        <div id="progressbar" class="progress-bar"></div>
+    </div>
+    <p class="breadcrumbs">
+        <a href="/">home</a> / 
+    </p>
+
 <main class="wrapper">
-<% subcategorieItems.forEach(subItem => {%>
-    <label for="<% subItem.name %>">
-        <a href="prompt/<%- subItem.id %>"><div class="choiceMenu SubMenuItem<%- subItem.id %>"><p class="btnBorder"><%= subItem.name %></p></div></a>
-    </label>
+    <% subcategorieItems.forEach(subItem => {%>
+        <label for="<% subItem.name %>">
+            <a href="/prompt/<%-subItem.id %>">
+                <div class="choiceMenu SubMenuItem<%- subItem.id %>">
+                    <p class="btnBorder"><%= subItem.name %></p>
+                </div>
+            </a>
+        </label>
     <%}); %>
 </main>
  

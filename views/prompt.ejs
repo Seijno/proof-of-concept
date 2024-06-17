@@ -1,0 +1,9 @@
+<%- include ("partials/head") %>
+<%- include ("partials/navlink") %>
+
+<% promptItem.forEach(item => {%>
+    <label for="<%- item.name %>">
+       <p><%= item.text %></p>
+    </label>
+<%}); %> 
+<%- include ("partials/foot") %>
