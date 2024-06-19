@@ -43,6 +43,7 @@ Wat je nodig hebt om hieraan te werkek:
 * Express
 
 ## Bronnen
+[Directus API rules](https://learndirectus.com/how-to-filter-the-directus-api/)
 
 ## Licentie
 
