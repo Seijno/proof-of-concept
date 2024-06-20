@@ -56,6 +56,7 @@ app.post('/result', function(req, res) {
     dateData = req.body.dateData;
     result.push(textData, fileData, dateData, textData2, numberData);
     res.redirect(301, '/result');
+    console.log(result);
   });
   
 // Stel het poortnummer in waar express naar moet gaan luisteren
