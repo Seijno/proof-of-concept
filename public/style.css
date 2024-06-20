@@ -59,6 +59,7 @@ html{
 body{
     background: var(--color-base);
     font-family: sans-serif;
+    color: white;
 }
 
 p{
@@ -110,7 +111,7 @@ nav{
     transition: 1s ;
     opacity: 0;
     animation: fadeIn 1.5s forwards;
-    background: var(--color-tint-support);
+    background: var(--color-support);
 }
 
 .btnBorder{
@@ -118,7 +119,7 @@ nav{
     width: 15rem;
     height: 3rem;
     background: rgba(92, 92, 92, 0.527);
-    color: var(--color-card);
+    color: var(--color-text);
     line-height: 3rem;
     border: solid 2px black;
     text-align: center;
@@ -126,7 +127,7 @@ nav{
 
 }
 /* menu item with a id number after it THIS IS NOT A GOOD LONG TERM STYLING, its a test with ejs styling */
-.menuItem1{
+/* .menuItem1{
     background: url(assets/audit.png);
     background-size: cover;
 }
@@ -139,7 +140,7 @@ nav{
 .menuItem3{
     background: url(assets/consulting.png);
     background-size: cover;
-}
+} */
 
   /* form/prompt styling */
 .promptForm{

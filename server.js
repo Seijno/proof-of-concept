@@ -19,7 +19,7 @@ prompt = apiUrl + 'deloitte_prompts?filter[subcategorie]='
 
 // loading index and GET categories
 app.get('/', function(request, response) {
-    fetchJson(categorie)
+    // fetchJson(categorie)
     response.render('index', {           
         items: categorie.data
     })
