@@ -3,7 +3,7 @@
 
 <% promptItem.forEach(item => {%>
     <label for="<%- item.name %>">
-       <form action="" method="POST" class="promptForm">
+       <form action="/result" method="POST" class="promptForm">
             <p>
                 <!-- financial review -->
                 <%- item.text.replace("{{ Financial Statement File }}", '<input class="form__input" type="file" name="fileData" placeholder="Survey Results">')

@@ -2,7 +2,8 @@ import express from 'express';
 import fetchJson from './helpers/fetch-json.js'
 
 
-const app = express()
+const app = express(),
+result = [];
 
 app.set('view engine', 'ejs')
 app.set('views', './views')
@@ -42,15 +43,20 @@ app.get('/prompt/:id', async function(request, response) {
     })
 });
 
-//   404 error pagina
-//   app.use(function(request, responds, next) {
-//     request.status(404);
+app.get('/result', async function(request, response) {
+    response.render('result', {result})
+});
 
-//     if (request.accepts('html')) {
-//       responds.render('404', { url: req.url });
-//       return;
-//     }
-// })
+    // data post
+app.post('/result', function(req, res) {
+    const textData = req.body.textData,
+    textData2 = req.body.textData2,
+    fileData = req.body.fileData,
+    numberData = req.body.numberData,
+    dateData = req.body.dateData;
+    result.push(textData, fileData, dateData, textData2, numberData);
+    res.redirect(301, '/result');
+  });
   
 // Stel het poortnummer in waar express naar moet gaan luisteren
 app.set('port', process.env.PORT || 8001)

@@ -27,12 +27,13 @@ document.querySelectorAll(".choiceMenu, .btnBorder")
   });
 
 // loader hider/appear
-const active = document.querySelector(".choiceMenu");
+const trigger = document.querySelector(".navItems");
 const hider = document.querySelector(".loadHider");
+const shower = document.querySelector(".loader")
 active.addEventListener(click, show);
 
 function show(){
-  hider.classList.toggle('loader')
+  hider.classList.toggle('shower')
 };
 
       

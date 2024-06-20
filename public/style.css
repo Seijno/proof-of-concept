@@ -83,6 +83,12 @@ nav{
     width: 5rem;
     text-align: center;
     line-height: 1.5rem;
+    transition: 0.1s;
+}
+
+.navItems:hover{
+    background: var(--color-tint-support);
+    transition: 0.2s;
 }
 
 .logoName{
