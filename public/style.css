@@ -59,7 +59,7 @@ html{
 body{
     background: var(--color-base);
     font-family: sans-serif;
-    color: white;
+    /* color: white; */
 }
 
 p{
