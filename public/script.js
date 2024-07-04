@@ -26,16 +26,6 @@ document.querySelectorAll(".choiceMenu, .btnBorder")
     div.style.animationDelay = `${index * 0.2}s`;
   });
 
-// loader hider/appear
-const trigger = document.querySelector(".navItems");
-const hider = document.querySelector(".loadHider");
-const shower = document.querySelector(".loader")
-active.addEventListener(click, show);
-
-function show(){
-  hider.classList.toggle('shower')
-};
-
       
 
       

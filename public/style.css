@@ -142,6 +142,7 @@ nav{
 .formstyling{
     color: var(--color-text);
    }
+   
 /* progress bar */
 .progress-container {
 	position: fixed;
